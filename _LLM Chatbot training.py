@@ -28,18 +28,21 @@ def load_document(file):
     return data
 
 
-
+# Splitting/chunking the data from the different document types
 def chunk_data(data, chunk_size=256, chunk_overlap=20):
     from langchain.text_splitter import RecursiveCharacterTextSplitter
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     chunks = text_splitter.split_documents(data)
     return chunks
 
+# Storing the chunked embeddings
 def create_embeddings(chunks):
     embeddings = OpenAIEmbeddings()
     vector_store = Chroma.from_documents(chunks, embeddings)
     return vector_store
 
+
+# Functions dealing with questions asked to delivering the answers
 def ask_and_get_answer(vector_store, q, k=3):
     from langchain.chains import RetrievalQA
     from langchain.chat_models import ChatOpenAI
@@ -54,7 +57,7 @@ def ask_and_get_answer(vector_store, q, k=3):
     
     return answer
 
-# older code 
+# Calculating the embedding costs 
 
 def calculate_embedding_cost(texts):
     import tiktoken
@@ -65,11 +68,13 @@ def calculate_embedding_cost(texts):
 
     return total_tokens, total_tokens / 1000 * 0.0004 
 
+# Clearing the history in the session state 
+
 def clear_history():
     if 'history' in st.session_state:
         del st.session_state['history']
 
-
+# Runner code and Streamlit components for the different widgets on the page
 if __name__ == "__main__":
     import os
     from dotenv import load_dotenv, find_dotenv
