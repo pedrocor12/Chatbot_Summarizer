@@ -35,7 +35,7 @@ Chatbot Summarizer is a powerful application that lets users upload documents in
 
 3. **Run the Application**:
    ```bash
-   streamlit run your_script_name.py
+   streamlit run app.py
    ```
 
 ## Usage
