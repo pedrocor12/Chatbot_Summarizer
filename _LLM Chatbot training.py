@@ -122,16 +122,16 @@ if __name__ == "__main__":
             answer = ask_and_get_answer(vector_store, question, k)
             st.text_area('LLM Answer: ', value=answer)
 
-        st.divider()
-        if 'history' not in st.session_state:
-            st.session_state.history = ''
-        value = f'Question: {question} \nAnswer: {answer}'
-
-        st.session_state.history = f'{value} \n {"-" * 100} \n {st.session_state.history}'
-
-        h = st.session_state.history
-
-        st.text_area(label='Chat History', value=h, key='history', height=400)
+            st.divider()
+            if 'history' not in st.session_state:
+                st.session_state.history = ''
+            value = f'Question: {question} \nAnswer: {answer}'
+    
+            st.session_state.history = f'{value} \n {"-" * 100} \n {st.session_state.history}'
+    
+            h = st.session_state.history
+    
+            st.text_area(label='Chat History', value=h, key='history', height=400)
     
     hide_st_style = """
         <style>
