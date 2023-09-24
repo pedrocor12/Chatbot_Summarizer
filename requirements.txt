@@ -5,3 +5,4 @@ pypdf
 streamlit
 chromadb == 0.3.29
 tiktoken
+pandas==1.3.3
