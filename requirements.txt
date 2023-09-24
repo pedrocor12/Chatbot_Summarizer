@@ -3,6 +3,6 @@ langchain
 docx2txt
 pypdf
 streamlit
-sqlite3 >= 3.35.0
+sqlite3 = 3.41.2
 chromadb
 tiktoken
