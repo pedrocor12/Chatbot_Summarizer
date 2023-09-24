@@ -52,6 +52,15 @@ Chatbot Summarizer is a powerful application that lets users upload documents in
 ## Links
 
 - Project repository: [https://github.com/pedrocor12/Chatbot_Summarizer]
+  
+## Project running 
 
+![image](https://github.com/pedrocor12/Chatbot_Summarizer/assets/57505565/f6d93038-efbf-4191-bbe8-6d50b648ddc3)
+
+## Question , answer and chat history with previous questions
+
+While diving into the 80-page GDPR regulation, I found myself wishing for an easier way to get to the heart of such a lengthy document. That's when the idea hit me: what if there was a tool that could quickly summarize big documents, highlighting the key points? With that spark of inspiration, I decided to create this application to help others, like myself, save time and get straight to the essentials. However, any document can be used , I will be adding more functionality to support wikipedia search and other types of documents in the future.
+
+![image](https://github.com/pedrocor12/Chatbot_Summarizer/assets/57505565/d240881e-5058-4536-9651-19bc93a51eeb)
 
 
